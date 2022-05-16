@@ -51,5 +51,6 @@ POST	http://localhost:8001/api/users
   "password": "test",
   "client": "/api/clients/{id}"
 }
+
 •	Supprimer un utilisateur ajouté par un client.
 DELETE http://localhost:8001/api/users/{id}
