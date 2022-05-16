@@ -1,56 +1,82 @@
-# Projet7 de la formation Openclassrooms dévéloppement Backend PHP Symfony
+# Project 7 Openclassrooms Backend Development PHP Symfony
 
-Création d'une API REST
+Create an API REST
 
-Pour télécharger le projet en local
+Made with PHP 7 and Symfony 5
 
-Situez vous dans un répertoire
+To get a local copy follow these simple steps
 
-git clone
+git clone https://github.com/jorisreynes/Projet7.git
 
-Installer les dépendances
-composer install
+• Install dependencies
 
-Créer la base de données
-php bin/console doctrine:database:create
+    composer install
+    
+• Create the database
 
-Créer et installer les migrations
-php bin/console make:migration
-php bin/console doctrine:migrations:migrate
+    php bin/console doctrine:database:create
+    
+• Create and install migrations
 
-Créer un server
-php -S localhost:8000 -t public
+    php bin/console make:migration 
 
-Accéder à la page d'informations de l'API
-http://localhost:8000/api
+    php bin/console doctrine:migrations:migrate
+    
+• Create a virtual server
 
-Pour se connecter
-POST http://localhost:8000/api/login_check
-{
-    "username": "test@test.com",
+    php -S localhost:8000 -t public
+
+
+• API information page
+
+    http://localhost:8000/api
+
+• Sign in
+
+    POST http://localhost:8000/api/login_check
+    {
+        "username": "test@test.com",
     "password": "password"
-}
+    }
 
-•	Consulter la liste des produits BileMo
-GET	http://localhost:8000/api/products
+•	See product list
 
-•	Consulter les détails d’un produit BileMo
-GET	http://localhost:8000/api/products/{id}
+GET	method
 
-•	Consulter la liste des utilisateurs inscrits liés à un client sur le site web
-GET	http://localhost:8001/api/clients/{id}
+    http://localhost:8000/api/products
 
-•	Consulter le détail d’un utilisateur inscrit lié à un client
-GET	http://localhost:8001/api/users/{id}
+•	See product details
 
-•	Ajouter un nouvel utilisateur lié à un client
-POST	http://localhost:8001/api/users
-{
-  "email": "test@test.com",
-  "roles": [],
-  "password": "test",
-  "client": "/api/clients/{id}"
-}
+GET	method
 
-•	Supprimer un utilisateur ajouté par un client.
-DELETE http://localhost:8001/api/users/{id}
+    http://localhost:8000/api/products/{id}
+
+•	See the user list of a client
+
+GET method
+
+    http://localhost:8001/api/clients/{id}
+
+•	See the user details of a client
+GET	methode
+
+    http://localhost:8001/api/users/{id}
+
+•	Add a new user
+
+POST method
+
+    http://localhost:8001/api/users
+    
+    {
+    "email": "test@test.com",
+    "roles": [],
+      "password": "test",
+      "client": "/api/clients/{id}"
+    }
+
+•	Delete an user
+
+DELETE method
+
+    http://localhost:8001/api/users/{id}
