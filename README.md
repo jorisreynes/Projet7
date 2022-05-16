@@ -33,10 +33,13 @@ git clone https://github.com/jorisreynes/Projet7.git
 
 • Sign in
 
-    POST http://localhost:8000/api/login_check
+ POST method
+ 
+    http://localhost:8000/api/login_check
+    
     {
         "username": "test@test.com",
-    "password": "password"
+        "password": "password"
     }
 
 •	See product list
