@@ -58,18 +58,18 @@ GET	method
 
 GET method
 
-    http://localhost:8001/api/clients/{id}
+    http://localhost:8000/api/clients/{id}
 
 •	See the user details of a client
 GET	methode
 
-    http://localhost:8001/api/users/{id}
+    http://localhost:8000/api/users/{id}
 
 •	Add a new user
 
 POST method
 
-    http://localhost:8001/api/users
+    http://localhost:8000/api/users
     
     {
     "email": "test@test.com",
@@ -82,4 +82,4 @@ POST method
 
 DELETE method
 
-    http://localhost:8001/api/users/{id}
+    http://localhost:8000/api/users/{id}
